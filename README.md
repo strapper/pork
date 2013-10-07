@@ -14,25 +14,29 @@ The following is an example of a program that porks a process, and sends and rec
 
 ### main.coffee
 
-    {pork} = require 'pork'
-    server = pork "#{__dirname}/pong.js"
+````coffee
+{pork} = require 'pork'
+server = pork "#{__dirname}/pong.js"
 
-    pings = 0
-    ping  = ->
-      return if ++pings > 5
-      setTimeout
-        server.send 'ping'
-        server.once 'message', (msg) ->
-          console.log msg
-          ping()
-      , 1000
+pings = 0
+ping  = ->
+  return if ++pings > 5
+  setTimeout
+    server.send 'ping'
+    server.once 'message', (msg) ->
+      console.log msg
+      ping()
+  , 1000
+````
 
 ### pong.coffee
 
-    require 'pork'
+````coffee
+require 'pork'
 
-    process.on 'message', (msg) ->
-      process.send 'pong'
+process.on 'message', (msg) ->
+  process.send 'pong'
+````
 
 ## Limitations
 
