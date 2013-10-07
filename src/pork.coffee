@@ -30,7 +30,6 @@ pork = (modulePath) ->
   args     = execArgv.concat [ modulePath ], args
 
   options.execPath ?= process.execPath
-  options.detached ?= true
   options.env       = extend options.env ? process.env, { NODE_STDIO_FORKED: true }
 
   proc = spawn options.execPath, args, options
