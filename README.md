@@ -1,8 +1,12 @@
 # pork
 
-pork is an improved ```fork``` for node. Instead of keeping your event loop active until you call ```disconnect``` (and thus shutting down IPC), pork keeps your event loop active only when you have active listeners.
+pork is an improved ```fork``` for node. Unlike fork, pork doesn't unnecessarily keep your process alive. With fork, you have to call ```process.disconnect()``` or ```process.exit()```. With pork, your process will automatically exit when there are no more active listeners for ```message``` on a process.
 
 pork is useful when you want to run services in the background that shutdown when your code has finished running.
+
+## Installation
+
+    $ npm install pork
 
 ## Example
 
