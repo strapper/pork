@@ -1,6 +1,6 @@
 {
   "name":        "pork",
-  "version":     "0.1.0",
+  "version":     "0.1.1",
   "author":      "Gerald Monaco",
   "description": "An improved fork that doesn't keep your app alive",
   "keywords":    [ "process", "fork", "spawn" ],
