@@ -1,0 +1,19 @@
+{
+  "name":        "pork",
+  "version":     "0.1.0",
+  "author":      "Gerald Monaco",
+  "description": "An improved fork that doesn't keep your app alive",
+  "keywords":    [ "process", "fork", "spawn" ],
+  "license":     "MIT",
+  "main":        "lib/pork.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapper/pork.git"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "byline": "3.1.x"
+  }
+}
